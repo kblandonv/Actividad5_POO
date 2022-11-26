@@ -134,20 +134,25 @@ public class Test {
                             System.out.println ("1-Modificar Nombre");
                             System.out.println ("2-Modificar Cedula");
                             System.out.println ("3-Modificar Apellido");
-                            System.out.println ("5-Cancelar");
+                            System.out.println ("4-Cancelar");
                             opcion2=sc.nextInt ();
                             switch (opcion2){
                                 case 1:
                                     sc.nextLine ();
                                     System.out.println ("Nombre actual: "+persona.getNombre ());
+                                    System.out.println("Ingrese el nuevo nombre: ");
                                     persona.setNombre (sc.nextLine ());
                                     break;
                                 case 2:
+                                    sc.nextLine();
                                     System.out.println ("Cedula actual: "+persona.getCedula ());
+                                    System.out.println("Ingrese la nueva cedula de la persona: ");
                                     persona.setCedula (sc.nextLine ());
                                     break;
                                 case 3:
-                                    System.out.println ("Apellido actual "+persona.getApellido ());
+                                    sc.nextLine();
+                                    System.out.println ("Apellido actual: "+persona.getApellido ());
+                                    System.out.println("Ingrese el nuevo apellido de la persona: ");
                                     persona.setApellido (sc.nextLine ());
                                     break;
                                 case 4:
@@ -157,7 +162,7 @@ public class Test {
                                 default:
                                     System.out.println ("\nOpcion invalida\n");
                             }
-                        }while (opcion2!=3);
+                        }while (opcion2!=4);
                     }
                     break;
                 case 6:
